@@ -1,5 +1,3 @@
-const map = (value, x1, y1, x2, y2) => (value * y2) / y1;
-
 export function VolumeBar({ volume, maxVolume, amountOfBars }) {
   let barsFilled;
   if (volume / maxVolume < 0.5) {
@@ -21,16 +19,15 @@ export function VolumeBar({ volume, maxVolume, amountOfBars }) {
         <span>{volume === 0 ? 'MUTED' : volume}</span>
       </div>
       <div>
-        <span className="">
-          {bars}
-          {dots}
-        </span>
+        {bars}
+        {dots}
       </div>
     </div>
   );
 }
+
 VolumeBar.defaultProps = {
   volume: 0,
   maxVolume: 255,
-  amountOfBars: 16,
+  amountOfBars: 10,
 };

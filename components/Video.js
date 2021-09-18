@@ -144,7 +144,7 @@ export function Video({ maxVolume, amountOfBars, season, episode, src }) {
           <video
             className={classNames(
               'absolute w-full h-full object-cover mix-blend-screen',
-              !isPlaying && 'invisible'
+              isPlaying && 'invisible'
             )}
             autoPlay
             muted
